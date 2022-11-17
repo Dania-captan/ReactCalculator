@@ -22,21 +22,24 @@ const calculate = () =>{
   setCalc(eval(calc).toString())
 }
 const deleteLast =()=>{
-  if (calc=='') { return;}
-  const value=calc.slice(0,-1);
-  
-  setCalc(value);
-  
-  if (!value==''){
-      if (!ops.includes(value.slice(-1))){
-        setResult(()=>eval(value).toString())
-      }
-      else{
-        setResult(()=>eval(value.slice(0,-1)).toString())
-      }
-    } else {
-      setResult(0)
-    }
+ 
+        if (calc=='') { return;}
+       
+        const value=calc.slice(0,-1);
+        
+        setCalc(value);
+        
+        if (!value==''){
+            if (!ops.includes(value.slice(-1))){
+              setResult(()=>eval(value).toString())
+            }
+            else{
+              setResult(()=>eval(value.slice(0,-1)).toString())
+            }
+          } else {
+            setResult(0)
+          }
+ 
 }
 
  const createDigits =()=>{
