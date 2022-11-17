@@ -17,7 +17,7 @@ if (
   if (!ops.includes(value)){
     setResult(()=>eval(calc+value).toString())
   }
-}
+} //fff
 const calculate = () =>{
   setCalc(eval(calc).toString())
 }
